@@ -23,6 +23,8 @@
 
     const autoClickerUpgradeButton = document.getElementById("autoClickerUpgradeButton")
     const autoclickerPrice = document.getElementById("auroclickerPrice")
+
+    autoClickPower = 1;
     
     image.addEventListener("click", () => {
         clickCount++
@@ -30,11 +32,12 @@
     })
     autoClickerUpgradeButton.addEventListener("click", () => {
         if(clickCount >= autoclickerPrice){
-
+            
         }
     })
     function autoClicker(){
-        image.click()
+        clickCount += autoClickPower;
+        clickSpan,TextContent = clickCount
     }
     
     let interval = setInterval(autoClicker, 1000)
