@@ -33,9 +33,9 @@
     autoClickerUpgradeButton.addEventListener("click", () => {
         if(clickCount >= autoclickerPrice){
             autoClickPower++;
-            clickCount -= autoClickerUpgradePrice
+            clickCount -= autoClickerUpgradePrice;
             autoClickerUpgradePrice *= 2
-            autoclickerPrice.textContent = Math.Floor(autoClickerUpgradePrice)
+            autoclickerPrice.textContent = Math.Floor(autoClickerUpgradePrice);
         }
     })
     function autoClicker(){
