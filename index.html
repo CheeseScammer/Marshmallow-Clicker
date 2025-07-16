@@ -13,16 +13,23 @@
     alt="" 
     width = "500" 
     height = "500">
-<div> Clicks: <span id = "click-count">0</span></div>
+    <h2> Clicks: <span id = "click-count">0</span></h2>
+    <button id="autoClickerUpgradeButton">Buy an Auto Clicker <span id="autoclickerPrice">50</span> marshmallow</button>
 <script>
     let clickCount = 0;
     const image = document.getElementById('Marshmallow');
     const clickSpan = document.getElementById('click-count');
+
+    const autoClickerUpgradeButton = document.getElementById("autoClickerUpgradeButton")
+    const autoclickerPrice = document.getElementById("auroclickerPrice")
     
     image.addEventListener("click", () => {
         clickCount++
         clickSpan.textContent = clickCount
     })
+    function autoClicker(){
+        image.click()
+    }
     
     let interval = setInterval(autoClicker, 1000)
 
