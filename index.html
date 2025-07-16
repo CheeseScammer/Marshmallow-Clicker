@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marshmallow Clicker</title>
+</head>
+<body>
+    <h2>Welcome to Marshmallow Clicker!</h2>
+    <img 
+    id = "Marshmallow" 
+    src="https://png.pngtree.com/png-clipart/20201209/original/pngtree-a-white-marshmallow-png-image_5663927.jpg" 
+    alt="" 
+    width = "500" 
+    height = "500">
+<div> Clicks: <span id = "click-count">0</span></div>
+<script>
+    let clickCount = 0;
+    const image = document.getElementById('Marshmallow');
+    const clickSpan = document.getElementById('click-count');
+    
+    image.addEventListener("click", () => {
+        clickCount++
+        clickSpan.textContent = clickCount
+    })
+
+</script>
+</body>
+</html>
