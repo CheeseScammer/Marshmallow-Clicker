@@ -15,12 +15,13 @@
     height = "500">
     <h2> Clicks: <span id = "click-count">0</span></h2>
     <button id="autoClickerUpgradeButton">Buy an Auto Clicker <span id="autoclickerPrice">50</span> marshmallow</button>
+    <h2>Auto Clicker Level: <span id="autoClickerLevel">0</span></h2>
 
 <script>
     let clickCount = 0;
     const image = document.getElementById('Marshmallow');
     const clickSpan = document.getElementById('click-count');
-
+    const autoClickerLevel = document.getElementById("autoClickerLevel");
     const autoClickerUpgradeButton = document.getElementById("autoClickerUpgradeButton")
     const autoclickerPrice = document.getElementById("autoclickerPrice")
 
@@ -29,6 +30,7 @@
     image.addEventListener("click", () => {
         clickCount++
         clickSpan.textContent = Math.floor(clickCount);
+        autoClickerLevel.textContent = Math.floor(autoClickPower);
     })
         let acPrice = 50;
     autoClickerUpgradeButton.addEventListener("click", () => {
@@ -44,8 +46,8 @@
     })
     function autoClicker(){
         clickCount += autoClickPower;
-        clickSpan.textContent = clickCount;
         clickSpan.textContent = Math.floor(clickCount);
+        autoClickerLevel.textContent = autoClickPower;
     }
     
     let interval = setInterval(autoClicker, 1000)
