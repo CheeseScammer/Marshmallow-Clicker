@@ -28,8 +28,7 @@
 
     image.addEventListener("click", () => {
         clickCount++
-        clickSpan.textContent = clickCount
-
+        clickSpan.textContent = Math.floor(clickCount);
     })
         let acPrice = 50;
     autoClickerUpgradeButton.addEventListener("click", () => {
@@ -46,6 +45,7 @@
     function autoClicker(){
         clickCount += autoClickPower;
         clickSpan.textContent = clickCount;
+        clickSpan.textContent = Math.floor(clickCount);
     }
     
     let interval = setInterval(autoClicker, 1000)
