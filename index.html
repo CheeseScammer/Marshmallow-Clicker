@@ -6,7 +6,7 @@
     <title>Marshmallow Clicker</title>
 </head>
 <body>
-    <h2>Welcome to Marshmallow Clicker! We Hope You Enjoy Your Expierence!</h2>
+    <h2>Welcome to Marshmallow Clicker! We Hope You Enjoy Your Expierence</h2>
     <img 
     id = "Marshmallow" 
     src="https://png.pngtree.com/png-clipart/20201209/original/pngtree-a-white-marshmallow-png-image_5663927.jpg" 
@@ -22,7 +22,7 @@
     const clickSpan = document.getElementById('click-count');
 
     const autoClickerUpgradeButton = document.getElementById("autoClickerUpgradeButton")
-    const autoclickerPrice = document.getElementById("auroclickerPrice")
+    const autoclickerPrice = document.getElementById("autoclickerPrice")
 
     let autoClickPower = 0;
     
@@ -31,11 +31,13 @@
         clickSpan.textContent = clickCount
     })
     autoClickerUpgradeButton.addEventListener("click", () => {
-        if(clickCount >= autoclickerPrice){
+        let acPrice = 50;
+        autoclickerPrice.textContent = acPrice;
+        if(clickCount >= acPrice){
             autoClickPower++;
-            clickCount -= autoClickerUpgradePrice;
-            autoClickerUpgradePrice *= 1.2
-            autoclickerPrice.textContent = Math.Floor(autoClickerUpgradePrice);
+            clickCount -= acPrice;
+            acPrice *= 1.5
+            autoclickerPrice.textContent = Math.floor(acPrice);
             
         }
     })
