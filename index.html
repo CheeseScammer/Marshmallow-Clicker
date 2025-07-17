@@ -25,20 +25,20 @@
     const autoclickerPrice = document.getElementById("autoclickerPrice")
 
     let autoClickPower = 0;
-    let acPrice = 50;
-    
+
     image.addEventListener("click", () => {
         clickCount++
         clickSpan.textContent = clickCount
 
     })
+        let acPrice = 50;
     autoClickerUpgradeButton.addEventListener("click", () => {
 
         autoclickerPrice.textContent = acPrice;
         if(clickCount >= acPrice){
             autoClickPower++;
             clickCount -= acPrice;
-            acPrice *= 1.5
+            acPrice *= 1.2
             autoclickerPrice.textContent = Math.floor(acPrice);
             
         }
