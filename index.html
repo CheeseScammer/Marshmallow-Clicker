@@ -4,6 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marshmallow Clicker</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .info-panel {
+            max-width: 300px;
+            text-align: left;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        h2, p {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <h2>Welcome to Marshmallow Clicker! We Hope You Enjoy Your Expierence</h2>
@@ -11,8 +46,8 @@
     id = "Marshmallow" 
     src="https://png.pngtree.com/png-clipart/20201209/original/pngtree-a-white-marshmallow-png-image_5663927.jpg" 
     alt="" 
-    width = "500" 
-    height = "500">
+    width = "400" 
+    height = "400">
     <h2> Clicks: <span id = "click-count">0</span></h2>
     <button id="autoClickerUpgradeButton">Buy an Auto Clicker <span id="autoclickerPrice">50</span> marshmallow</button>
     <h2>Auto Clicker Level: <span id="autoClickerLevel">0</span></h2>
